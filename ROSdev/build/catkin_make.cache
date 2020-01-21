@@ -1,0 +1,2 @@
+beginner_tutorials
+-DCATKIN_DEVEL_PREFIX=/home/prkizir/Desktop/ITESM/10mo/AppliedRobotics/ROSdev/devel -DCMAKE_INSTALL_PREFIX=/home/prkizir/Desktop/ITESM/10mo/AppliedRobotics/ROSdev/install -G Unix Makefiles
