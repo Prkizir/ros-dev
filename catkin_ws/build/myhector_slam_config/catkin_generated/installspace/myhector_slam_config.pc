@@ -1,0 +1,8 @@
+prefix=/home/prkizir/catkin_ws/install
+
+Name: myhector_slam_config
+Description: Description of myhector_slam_config
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

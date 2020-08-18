@@ -1,0 +1,34 @@
+<launch>
+	<!-- Start Walls World with Two Wheels Robot -->
+
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find two_wheels_description_v2)/world/walls.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+	<include file="$(find two_wheels_description_v2)/launch/spawn.launch"/>
+
+	<!-- Nav2d Files -->
+
+	<!-- Some general parameters -->
+	<param name="use_sim_time" value="true" />
+	<rosparam file="$(find two_wheels_description_v2)/param/ros.yaml"/>
+
+	<node name="Operator" pkg="nav2d_operator" type="operator" >
+		<remap from="scan" to="base_scan"/>
+		<rosparam file="$(find two_wheels_description_v2)/param/operator.yaml"/>
+		<rosparam file="$(find two_wheels_description_v2)/param/costmap.yaml" ns="local_map" />
+	</node>
+
+	<!-- Start the semiauto teleop remote-controller for operation-->
+	<node name="teleop_semiauto" pkg="two_wheels_navigation" type="teleop_semiauto.py" />
+
+	<!-- RVIZ to view the visualization -->
+	--<node name="RVIZ" pkg="rviz" type="rviz" args=" -d $(find two_wheels_description_v2)/param/tutorial1.rviz" />
+
+</launch>

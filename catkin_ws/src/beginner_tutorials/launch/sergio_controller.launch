@@ -1,0 +1,8 @@
+<launch>
+	
+	<include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+	<include file="$(find two_wheels_description)/launch/spawn.launch"/>
+
+	<node pkg="beginner_tutorials" name="sergio_robot_control.py" type="controller"></node>
+
+</launch>

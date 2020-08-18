@@ -1,0 +1,27 @@
+<launch>
+  <node pkg="tf"
+        type="static_transform_publisher"
+        name="link1_broadcaster"
+        args="1 0 0 0 0 0 map odom 100"/>
+
+  <node pkg="tf"
+        type="static_transform_publisher"
+        name="link2_broadcaster"
+        args="3 0 0 0 0 0 odom base_footprint 100"/>
+
+
+  <node pkg="tf"
+        type="static_transform_publisher"
+        name="link3_broadcaster"
+        args="0 0 1.5 0 0 0 base_footprint base_stabilized 100"/>
+
+  <node pkg="tf"
+        type="static_transform_publisher"
+        name="link4_broadcaster"
+        args="0 0 0 0 0 -0.5236 base_stabilized base_link 100"/>
+
+  <node pkg="tf"
+        type="static_transform_publisher"
+        name="link5_broadcaster"
+        args="0.7 0 1 0 0 0 base_link laser_link 100"/>
+</launch>

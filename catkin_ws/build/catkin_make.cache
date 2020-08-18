@@ -1,0 +1,2 @@
+beginner_tutorials:myhector_slam_config:recolect:two_wheels_description:two_wheels_description_v2:two_wheels_navigation
+-DCATKIN_DEVEL_PREFIX=/home/prkizir/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/prkizir/catkin_ws/install -G Unix Makefiles

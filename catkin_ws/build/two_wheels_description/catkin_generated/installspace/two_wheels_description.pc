@@ -1,0 +1,8 @@
+prefix=/home/prkizir/catkin_ws/install
+
+Name: two_wheels_description
+Description: Description of two_wheels_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

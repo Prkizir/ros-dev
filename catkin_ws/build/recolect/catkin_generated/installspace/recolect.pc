@@ -1,0 +1,8 @@
+prefix=/home/prkizir/catkin_ws/install
+
+Name: recolect
+Description: Description of recolect
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
